@@ -14,6 +14,7 @@
 #include <QFileDialog>
 
 #include <QApplication>
+#include <regex>
 
 #ifdef __LINUX__
 #include <sys/reboot.h>
@@ -34,6 +35,7 @@ private:
     inline void init();                             // 初始化方法
     inline void read_template();                    // 主题读取方法
     inline void read_page_data();                   // 读取页面数据
+    inline void read_config();
 
     // 下面是各种回调函数
     inline void CallBack_button_swichpage_up();

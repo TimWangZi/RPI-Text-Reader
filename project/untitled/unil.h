@@ -4,7 +4,7 @@
 
 #define PAGE_SIZE 200          //单页字数
 #define BOOK_NUM  20           //
-#define __LINUX__              //Linux
+// #define __LINUX__              //Linux
 // 下面是主要属性结构体
 struct basic_option {
     QString working_space = "/home/pi/Desktop/build-Textreader-unknown-Release/untitled/data/";

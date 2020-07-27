@@ -2,6 +2,7 @@
 
 Window::Window(QWidget *parent)
     : QWidget(parent) {
+    read_config();
     read_page_data();
     read_template();
     init();
@@ -292,4 +293,12 @@ inline void Window::CallBack_button_poweroff() {
 
 Window::~Window() {
     file_device.close();
+}
+
+inline void Window::read_config(){
+    QFile file;
+    file.setFileName("config.txt");
+    QTextStream text_stream(&file);
+    auto x = text_stream.readAll();
+    std::regex reg{}
 }
